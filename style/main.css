@@ -1,0 +1,15 @@
+
+/* カテゴリプルダウンと検索窓の位置 */
+.top_header{
+    text-align: center;
+}
+
+/* マイページアイコンのサイズ */
+#image-button01{
+    max-width: 50px;
+    height: auto;
+}
+
+.top_Registration{
+    width: 100%;
+}
