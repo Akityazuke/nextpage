@@ -4,22 +4,27 @@ $().ready(function(){
     $('form').submit(function(){
         var s_cate = $('option:selected').val();
         var s_word = $('#s_word').val();
-        var $search　= {'category':s_cate,'word':s_word};
-        console.log(s_cate);
-        console.log(s_word);
+        var s_word = "%"+s_word+"%";
+        var search　= {'category':s_cate,'word':s_word};
 
 //[非同期通信]index.htmlの検索窓で選択された内容送信
         $.ajax('http://localhost:8091/nextpage/php/top_main.php',{
             type: "POST",
-            data: $search,
+            data: JSON.stringify(search),
+            contentType: 'application/JSON',
+            scriptCharset: `utf-8`,
             datatype: 'json',
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                //未実装->Ajax通信ができなかった時の処理
-            },
+                alert("Server error. Once again thank you.");
+                console.log("XMLHttpRequest : " + XMLHttpRequest.status);
+                console.log("textStatus     : " + textStatus);
+                console.log("errorThrown    : " + errorThrown.message);
+                },
             success: function(response){
                 //PHPからの値を受け取る
                 if(s_cate == 'all' || s_cate == 'liqu'){
                     //未実装->search_result.htmlにレシピデータ受け渡し
+                    console.log(response);
                 }else {
                     //未実装->search_result_recipe.htmlにレシピデータ受け渡し
                 }
