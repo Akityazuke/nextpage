@@ -25,13 +25,12 @@ $().ready(function(){
                 if(s_cate == 'all' || s_cate == 'liqu'){
                     //未実装->search_result.htmlにレシピデータ受け渡し
                     console.log(response);
+                    window.location.href = "search_result.html";
                 }else {
+                    window.location.href = "search_result_recipe.html";
                     //未実装->search_result_recipe.htmlにレシピデータ受け渡し
                 }
             }
         });
     });
 });
-
-// 現在の課題
-// - indexhtmlでカテゴリーを選択後、どのようにレシピの選別を行うか
