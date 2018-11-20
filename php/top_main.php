@@ -30,5 +30,9 @@ print_r(get_magic_quotes_gpc());
 
     $recipe_table = $stmt->fetchAll();
     array_unshift($recipe_table,$search_json['category']);
-    echo json_encode($recipe_table,JSON_UNESCAPED_UNICODE);
+    $fp= fopen("../pass_json/recipe_data.json","w");
+    $text = json_encode($recipe_table,JSON_UNESCAPED_UNICODE);
+    echo $text;
+    fwrite($fp,$text);
+    fclose($fp);
 ?>
