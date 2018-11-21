@@ -24,7 +24,6 @@ $().ready(function(){
                 //PHPからの値を受け取る
                 if(s_cate == 'all' || s_cate == 'liqu'){
                     //未実装->search_result.htmlにレシピデータ受け渡し
-                    console.log(response);
                     window.location.href = "search_result.html";
                 }else {
                     window.location.href = "search_result_recipe.html";
