@@ -19,7 +19,8 @@
 <body>
 
 <!-- 検索枠 -->
-    <form id = "">
+<div class="top_header">
+    <form id ="">
         <select id ="s_cate">
             <option value="all">すべて</option>
             <option value="recipe">レシピ</option>
@@ -28,28 +29,42 @@
         <input type="search" id="s_word" placeholder="カクテル・お酒検索">
         <input type="submit" id="s_top" value="検索">
     </form>
-<!-- マイページアイコン -->
+<!-- トップページのマイページアイコン -->
     <input type="image" id="image-button01" src="../nextpage_photo/Icon_mypage.jpeg">
+</div>
+<!-- トップページの簡易メニュー登録ウィンドウ -->
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-7">
 <!-- シェイカーの有無でのソート -->
-    <form id = "">
-        <select id ="r_shaker">
-            <option value="yes">シェイカーあり</option>
-            <option value="no">シェイカーなし</option>
-        </select>
-    </form>
+                <form id = "">
+                    <select id ="r_shaker">
+                        <option value="yes">シェイカーあり</option>
+                        <option value="no">シェイカーなし</option>
+                    </select>
+                </form>
 <!-- レシピ表示ソート -->
-    <form id = "">
-        <select id ="r_sort">
-            <option value="popularity">人気</option>
-            <option value="new">新着順</option>
-        </select>
-    </form>
-    <div id="view_recipe"></div>
-<!-- 簡易メニュー登録ウィンドウ -->
-    <input type="text" placeholder="タイトル">
-    <input type="text" placeholder="風味">
-    <input type="text" placeholder="シェイカー">
-    <input type="button" value="詳細">
+                <form id = "">
+                    <select id ="r_sort">
+                        <option value="popularity">人気</option>
+                        <option value="new">新着順</option>
+                    </select>
+                </form>
+                <div id="view_recipe"></div>
+            </div>  
+            <div class="col-3">
+                <input type="text" class="top_Registration" placeholder="タイトル">
+                <input type="text" class="top_Registration" placeholder="風味">
+                <input type="text" class="top_Registration" placeholder="シェイカー">
+                <input type="button" value="詳細">
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="col-0"></div>
+</div>
 
 </body>
 </html>
